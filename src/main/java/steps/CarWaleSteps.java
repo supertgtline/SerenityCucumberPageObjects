@@ -3,7 +3,6 @@ package steps;
 
 
 import net.thucydides.core.annotations.Step;
-import org.assertj.core.api.Assert;
 import pages.HomePage;
 import pages.NewCarsPage;
 
@@ -51,9 +50,9 @@ public class CarWaleSteps {
 	}
 	
 	@Step("Validating brand name")
-	public boolean validateBrandName(String brandName) {
+	public boolean validateBrandName(String title) {
 		
-		return home.getCarPageHeading().contains(brandName);
+		return home.getCarPageHeading().contains(title);
 	}
 	
 	
@@ -63,10 +62,9 @@ public class CarWaleSteps {
 		home.getCarNameAndPrice();
 		
 	}
-	
 	@Step("Update Car price in a file")
 	public void updateCarPriceInFile(String fileName) {
-		
+		home.getCarNameAndPrice();
 		home.updateCarPriceInFile(fileName);
 	}
 

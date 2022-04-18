@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
+import org.junit.Assert;
 import pages.NewCarsPage;
 import steps.CarWaleSteps;
 
@@ -41,9 +42,9 @@ public class NewCarSteps {
 
     }
 
-    @And("user validate car (.*)")
+    @And("user validate car (.*)$")
     public void user_validate_car_title(String title) {
         // Write code here that turns the phrase above into concrete actions
-        System.out.println("@And -- user validate car title: ");
+        Assert.assertTrue(carWaleSteps.validateBrandName(title));
     }
 }

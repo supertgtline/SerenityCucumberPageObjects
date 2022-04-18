@@ -6,7 +6,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features ="src/test/resources/features/findcar.feature",
+@CucumberOptions(features ="src/test/resources/features/findcarpriceandname.feature",
 glue = "cucumbersteps")
 public class RunCuke {
 }

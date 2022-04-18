@@ -110,7 +110,7 @@ public class BasePage extends PageObject {
 
 	/******* Business Specific common Functionality ********/
 
-	String headingText = "xpath=/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/h1[1]";
+	String headingText = "xpath=//h2[@class='o-fzpilz o-dAvrcB']";
 
 	public String getCarPageHeading() {
 
@@ -118,8 +118,8 @@ public class BasePage extends PageObject {
 
 	}
 
-	String carBrandName = "xpath=//li//div[1]//div[1]//div[1]//a[1]//h2[1]";
-	String carPrice = "xpath=//li/div[1]/div[1]/div[1]/div[1]/span[1]";
+	String carBrandName = "xpath=//h3[@class='o-jjpuv o-cVMLxW']";
+	String carPrice = "xpath=//span[@class='o-Hyyko o-cyHybq o-eZTujG o-eqqVmt']";
 
 	public ArrayList<String> list = new ArrayList<String>();
 	
