@@ -4,12 +4,11 @@ import base.BasePage;
 
 public class HomePage extends BasePage{
 	
-	String newCarMenu = "xpath=//div[contains(text(),'NEW CARS']";
+	String newCarMenu = "xpath=//div[contains(text(),'NEW CARS')]";
 	String findNewCar = "xpath=//div[contains(text(),'Find New Cars')]";
 	
 	
-	public void navigateToNewCars() throws InterruptedException {
-		Thread.sleep(10000);
+	public void navigateToNewCars() {
 		moveMouseTo(newCarMenu);
 	}
 	
@@ -18,7 +17,7 @@ public class HomePage extends BasePage{
 		
 		click(findNewCar);
 		
-		return this.switchToPage(NewCarsPage.class);
+		return  new NewCarsPage();
 	}
 
 	
